@@ -12,6 +12,8 @@ if (!jwtSecret) {
     process.exit(1);
 }
 
+
+
 const app = express();
 
 
@@ -21,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.set("view engine", "ejs");
-app.set("port", 3000);
+app.set("port", 10000);
 app.use(cookieParser());
 
 function asyncHandler(fn: (req: Request, res: Response, next: NextFunction) => Promise<any>): RequestHandler {
